@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f3ee">
+  <title>Mes portions</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div>
+        <p class="eyebrow">MON SUIVI ALIMENTAIRE</p>
+        <h1>Mes portions</h1>
+        <p class="date" id="today"></p>
+      </div>
+      <button class="settings" id="settingsButton" aria-label="Réglages">⚙</button>
+    </header>
+
+    <section class="grid" id="counterGrid" aria-label="Compteurs de portions"></section>
+
+    <footer>
+      <button class="reset" id="resetButton">Réinitialiser la journée</button>
+      <p>Une portion consommée? Touche sa case.</p>
+    </footer>
+  </main>
+
+  <dialog id="settingsDialog">
+    <form method="dialog" id="settingsForm">
+      <div class="dialog-head">
+        <h2>Mes objectifs quotidiens</h2>
+        <button class="close" value="cancel" aria-label="Fermer">×</button>
+      </div>
+      <p class="hint">Choisis le nombre de portions prévu pour chaque catégorie.</p>
+      <div id="settingsFields"></div>
+      <button class="save" id="saveSettings" value="save">Enregistrer</button>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "Mes portions",
+  "short_name": "Portions",
+  "lang": "fr-CA",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f3ee",
+  "theme_color": "#f5f3ee",
+  "icons": []
+}
