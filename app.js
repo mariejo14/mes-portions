@@ -41,10 +41,10 @@ function render() {
     tile.className = `tile ${cat.style} ${n === 0 ? "done" : ""}`;
     tile.setAttribute("aria-label", `${cat.name}, ${n} portions restantes. Toucher pour diminuer.`);
     tile.innerHTML = `<div class="topline"><span class="emoji">${cat.emoji}</span><span class="status">${n === 0 ? "Objectif atteint" : "Restant"}</span></div>
-      <span class="name">${cat.name}</span><span class="number">${n}</span><span class="tap">Toucher pour −1 portion</span>`;
+      <span class="name">${cat.name}</span><span class="number">${n}</span><span class="tap">Toucher pour −0.5 portion</span>`;
     tile.addEventListener("click", () => {
       if (state.remaining[cat.id] > 0) {
-        state.remaining[cat.id]--;
+        state.remaining[cat.id] = Math.max(0, state.remaining[cat.id] - 0.5);
         persist(); render();
       }
     });
