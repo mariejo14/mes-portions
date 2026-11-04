@@ -1,4 +1,4 @@
-const CACHE = "mes-portions-cache-v1";
+const CACHE = "mes-portions-cache-v2";
 const ASSETS = ["./", "./index.html", "./style.css", "./app.js", "./manifest.webmanifest"];
 self.addEventListener("install", event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS))));
 self.addEventListener("activate", event => event.waitUntil(
